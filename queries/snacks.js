@@ -24,7 +24,7 @@ const getSnack = async (id) => {
 const createSnack = async (snack) => {
     try {
         const newSnack = await db.one(
-            "INSERT INTO bookmarks (name, category, url, sugar, protein, fiber, is_vegan, is_vegetarian, is_glutenFree, is_favorite) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING *",
+            "INSERT INTO snacks (name, category, url, sugar, protein, fiber, is_vegan, is_vegetarian, is_glutenfree, is_favorite) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING *",
             [snack.name,
             snack.category,
             snack.url,
@@ -33,7 +33,7 @@ const createSnack = async (snack) => {
             snack.fiber,
             snack.is_vegan,
             snack.is_vegetarian,
-            snack.is_glutenFree,
+            snack.is_glutenfree,
             snack.is_favorite]
         );
         return newSnack;
@@ -59,7 +59,7 @@ const deleteSnack = async (id) => {
 const updateSnack = async (id, snack) => {
     try {
         const updatedSnack = await db.one(
-            "UPDATE snacks SET name=$1, category=$2, url=$3, sugar=$4, protein=$5, fiber=$6, is_vegan=$7, is_vegetarian=$8, is_glutenFree=$9, is_favorite=$10",
+            "UPDATE snacks SET name=$1, category=$2, url=$3, sugar=$4, protein=$5, fiber=$6, is_vegan=$7, is_vegetarian=$8, is_glutenfree=$9, is_favorite=$10 WHERE id=$11 RETURNING *",
             [snack.name,
             snack.category,
             snack.url,
@@ -68,9 +68,11 @@ const updateSnack = async (id, snack) => {
             snack.fiber,
             snack.is_vegan,
             snack.is_vegetarian,
-            snack.is_glutenFree,
-            snack.is_favorite]
-        )
+            snack.is_glutenfree,
+            snack.is_favorite,
+                id]
+        );
+        return updatedSnack;
     } catch (error) {
         return error;
     };
