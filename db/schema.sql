@@ -6,9 +6,14 @@ CREATE DATABASE snacks_dev;
 
 CREATE TABLE snacks (
     id SERIAL PRIMARY KEY,
-    name TEXT NOT NULL,
-    url TEXT,
+    name VARCHAR(32) NOT NULL,
     category TEXT,
+    url TEXT,
+    sugar FLOAT,
+    protein FLOAT,
+    fiber FLOAT,
+    is_vegan BOOLEAN,
+    is_vegetarian BOOLEAN,
+    is_glutenFree BOOLEAN,
     is_favorite BOOLEAN
 );
-
