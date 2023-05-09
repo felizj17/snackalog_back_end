@@ -24,14 +24,16 @@ const getSnack = async (id) => {
 const createSnack = async (snack) => {
     try {
         const newSnack = await db.one(
-            "INSERT INTO bookmarks (name, category, sugar, protein, fiber, is_vegan, is_vegetarian, is_favorite) VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING *",
+            "INSERT INTO bookmarks (name, category, url, sugar, protein, fiber, is_vegan, is_vegetarian, is_glutenFree, is_favorite) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING *",
             [snack.name,
             snack.category,
+            snack.url,
             snack.sugar,
             snack.protein,
             snack.fiber,
             snack.is_vegan,
             snack.is_vegetarian,
+            snack.is_glutenFree,
             snack.is_favorite]
         );
         return newSnack;
@@ -57,14 +59,16 @@ const deleteSnack = async (id) => {
 const updateSnack = async (id, snack) => {
     try {
         const updatedSnack = await db.one(
-            "UPDATE snacks SET name=$1, category=$2, sugar=$3, protein=$4, fiber=$5, is_vegan=$6, is_vegetarian=$7, is_favorite=$8",
+            "UPDATE snacks SET name=$1, category=$2, url=$3, sugar=$4, protein=$5, fiber=$6, is_vegan=$7, is_vegetarian=$8, is_glutenFree=$9, is_favorite=$10",
             [snack.name,
             snack.category,
+            snack.url,
             snack.sugar,
             snack.protein,
             snack.fiber,
             snack.is_vegan,
             snack.is_vegetarian,
+            snack.is_glutenFree,
             snack.is_favorite]
         )
     } catch (error) {
