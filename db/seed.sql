@@ -19,4 +19,4 @@ INSERT INTO snacks (name, category, url, sugar, protein, fiber, is_vegan, is_veg
 ('Lays Classic', 'Sweet/Savory', 'https://m.media-amazon.com/images/I/813axPlVxBL.jpg', 1, 2, 1, true, true, false, true),
 ('Blueberries', 'Fruits/Veggies', 'https://www.news-medical.net/images/Article_Images/ImageForArticle_22726_16560822540037952.jpg', 5.5, 1, 3.6, true, true, true, true),
 ('Apple Pie', 'Sweet/Savory', 'https://www.chewoutloud.com/wp-content/uploads/2012/12/apple-pie-2.jpg', 10, 1, 5, false, true, false, true),
-('String Cheese', 'Dairy', 'https://www.chewoutloud.com/wp-content/uploads/2012/12/apple-pie-2.jpg', 0, 7, 0, false, true, false, false);
+('String Cheese', 'Dairy', 'https://www.sargento.com/assets/00703_RFS_Stck_Strng_Mzzrll_24oz_24pk_Frnt__FillWzgwMCw4MDBd.png', 0, 7, 0, false, true, false, false);
