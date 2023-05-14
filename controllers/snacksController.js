@@ -9,7 +9,7 @@ const {
 
 // GET ALL
 snacks.get("/", async (req, res) => {
-    const allSnacks = await getAllSnacks();
+    const allSnacks = await getAllSnacks(req.query);
     if (allSnacks[0]) {
         res.status(200).json(allSnacks);
     } else {

@@ -6,6 +6,7 @@ CREATE DATABASE snacks_dev;
 
 CREATE TABLE snacks (
     id SERIAL PRIMARY KEY,
+    created_at TIMESTAMP default CURRENT_TIMESTAMP,
     name VARCHAR(32) NOT NULL,
     category TEXT,
     url TEXT,
