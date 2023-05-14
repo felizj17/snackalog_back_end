@@ -1,11 +1,11 @@
 \c snacks_dev;
 
-INSERT INTO snacks (name, category, url, sugar, protein, fiber, is_vegan, is_vegetarian, is_glutenFree, is_favorite) VALUES
+INSERT INTO snacks (name, category, created_at, url, sugar, protein, fiber, is_vegan, is_vegetarian, is_glutenFree, is_favorite) VALUES
 ('Oreo', 'Sweet/Savory', Now(), 'https://s7d1.scene7.com/is/image/CENODS/10020-newscripts-oreos?$responsive$&wid=300&qlt=90,0&resMode=sharp2', 6.6, 0.7, 0.4, false, false, false, true),
-('Pringles Original', Now(), 'Chips', 'https://storesgo.com/uploads/product/mediumthumb/jpg/pringles-potato-chips-40-g_1656651851.jpg', 1, 1, 1, true, true, false, true),
-('Doritos Nacho Cheese', Now(), 'Sweet/Savory', 'https://www.silmonwholesale.com/wp-content/uploads/2022/05/dorito-nacho.jpg', 1, 2, 1, true, false, true, true), 
+('Pringles Original', 'Chips', Now(), 'https://storesgo.com/uploads/product/mediumthumb/jpg/pringles-potato-chips-40-g_1656651851.jpg', 1, 1, 1, true, true, false, true),
+('Doritos Nacho Cheese', 'Sweet/Savory', Now(), 'https://www.silmonwholesale.com/wp-content/uploads/2022/05/dorito-nacho.jpg', 1, 2, 1, true, false, true, true), 
 ('Chex Mix', 'Grains', Now(), 'https://www.momontimeout.com/wp-content/uploads/2023/02/chex-mix-recipe-square.jpeg', 2.3, 4.2, 1.8, false, false, false, false),
-('Kettle Brand Sea Salt', Now(), 'Sweet/Savory', 'https://m.media-amazon.com/images/I/61qmCdqlBDL._AC_UF894,1000_QL80_.jpg', 0, 2, 2, true, true, true, false),
+('Kettle Brand Sea Salt', 'Sweet/Savory', Now(), 'https://m.media-amazon.com/images/I/61qmCdqlBDL._AC_UF894,1000_QL80_.jpg', 0, 2, 2, true, true, true, false),
 ('Boiled Egg', 'Proteins', Now(), 'https://altonbrown.com/wp-content/uploads/2020/08/Hard-Not-Boiled-Eggs_RecipeImage-1024x683.jpg', 0.6, 6, 0, false, true, true, true), 
 ('Apple', 'Fruits/Veggies', Now(), 'https://www.collinsdictionary.com/images/full/apple_158989157.jpg', 19, 0.5, 4.4, true, true, true, false), 
 ('Toast', 'Grains', Now(), 'https://images.eatthismuch.com/img/254567_ldementhon_b5307778-b72b-4510-a611-c62a8099f23b.png', 1.5, 3.1, 1.1, true, true, false, true),
