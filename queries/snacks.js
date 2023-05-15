@@ -3,7 +3,7 @@ const db = require('../db/dbConfig');
 // GET ALL
 const getAllSnacks = async queries => {
   try {
-    console.log(queries)
+    // console.log(queries)
     if (queries.favorite === 'true') {
       const allSnacks = await db.any(
         'SELECT * FROM snacks WHERE is_favorite=true'
